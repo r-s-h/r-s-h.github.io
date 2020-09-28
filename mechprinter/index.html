@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+.mini_container {
+ border: 1px black solid;
+}
+ .mini {
+     -webkit-print-color-adjust: exact !important;
+     color-adjust: exact !important;
+     background-color: #feb236;
+     padding: 0.1in;
+     padding-top: 0.2in;
+     padding-bottom: 0.2in;
+ }
+.size1 img {
+ width: 1.5in;
+ height: 1.5in;
+}
+.size2 img {
+ width: 3in;
+ height: 3in;
+}
+.flip {
+ transform: scaleY(-1);
+ -webkit-transform: scaleY(-1);
+}
+</style>
+</head>
+<body>
+    <table><tr>
+        <td>
+            <div class='mini_container size1' >
+	<img src='test_image.png' class='mini flip' \><br>
+	<img src='test_image.png' class='mini' \>
+</div>
+</td>
+<td>
+<div class='mini_container size2'>
+	<img src='test_image.png' class='mini flip' \><br>
+	<img src='test_image.png' class='mini' \>
+</div>
+</td>
+</tr></table>
+</body>
+</html>
