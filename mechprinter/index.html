@@ -2,12 +2,12 @@
 <head>
     <style>
      .mini_container {
-         border: 1px black solid;
+         border: 1px #999 solid;
      }
      .mini {
          -webkit-print-color-adjust: exact !important;
          color-adjust: exact !important;
-         background-color: #ff00ff;
+         background-color: #ffffff;
          padding: 0.1in;
          padding-top: 0.2in;
          padding-bottom: 0.2in;
@@ -23,11 +23,13 @@
      .flip {
          transform: scaleY(-1);
          -webkit-transform: scaleY(-1);
-         border-top: 1px dashed black;
+         border-top: 1px dashed #999999;
      }
-     @media print { .dontprint {
-         display: none;
-     }}
+     @media print {
+         .dontprint {
+            display: none;
+         }
+     }
     </style>
 </head>
 <body>
@@ -48,8 +50,8 @@
         for(var i =0; i<4; i++)
         {
             var cont = document.getElementById("c"+i);
-            cont.style.visibility = 'hidden';
-            if(i<num) cont.style.visibility = 'visible';
+            cont.style.display = "none";
+            if(i<num) cont.style.display = 'table-cell';
         }
      }
      function calcDimensionsForImage(img) {
