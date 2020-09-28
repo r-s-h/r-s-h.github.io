@@ -1,44 +1,113 @@
 <html>
 <head>
-<style>
-.mini_container {
- border: 1px black solid;
-}
- .mini {
-     -webkit-print-color-adjust: exact !important;
-     color-adjust: exact !important;
-     background-color: #feb236;
-     padding: 0.1in;
-     padding-top: 0.2in;
-     padding-bottom: 0.2in;
- }
-.size1 img {
- width: 1.5in;
- height: 1.5in;
-}
-.size2 img {
- width: 3in;
- height: 3in;
-}
-.flip {
- transform: scaleY(-1);
- -webkit-transform: scaleY(-1);
-}
-</style>
+    <style>
+     .mini_container {
+         border: 1px black solid;
+     }
+     .mini {
+         -webkit-print-color-adjust: exact !important;
+         color-adjust: exact !important;
+         background-color: #ff00ff;
+         padding: 0.1in;
+         padding-top: 0.2in;
+         padding-bottom: 0.2in;
+     }
+     .size1 img {
+         width: 1.5in;
+         height: 1.5in;
+     }
+     .size2 img {
+         width: 3in;
+         height: 3in;
+     }
+     .flip {
+         transform: scaleY(-1);
+         -webkit-transform: scaleY(-1);
+         border-top: 1px dashed black;
+     }
+     @media print { .dontprint {
+         display: none;
+     }}
+    </style>
 </head>
 <body>
+    <div class="dontprint">
+    <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" ><br>
+    long side (in)<input type="text"  value="2" id="longside" onkeyup="calcDimensions(event)"> 
+    bgcolor<input type="text"  value="#feb236" id="bgcolor" onkeyup="setColors(event)">
+    padding v<input type="text"  value="0.1" id="padding-v" onkeyup="setColors(event)">
+    padding h<input type="text"  value="0.1" id="padding-h" onkeyup="setColors(event)">
+    <input type="button" value="1" onclick="setVisible(1)" \>
+    <input type="button" value="2" onclick="setVisible(2)" \>
+    <input type="button" value="3" onclick="setVisible(3)" \>
+    <input type="button" value="4" onclick="setVisible(4)" \>
+    </div>
+
+    <script>
+     function setVisible(num) {
+        for(var i =0; i<4; i++)
+        {
+            var cont = document.getElementById("c"+i);
+            cont.style.visibility = 'hidden';
+            if(i<num) cont.style.visibility = 'visible';
+        }
+     }
+     function calcDimensionsForImage(img) {
+         var longside = document.getElementById('longside').value;
+         var destWidth = longside;
+         var destHeight = longside;
+         if(img.naturalWidth > img.naturalHeight) {
+             destHeight = destWidth * (img.naturalHeight/img.naturalWidth);
+         }
+         else {
+             destWidth = destHeight * (img.naturalWidth/img.naturalHeight);
+         }
+         img.style.width = destWidth +"in";
+         img.style.height = destHeight +"in";
+     }
+     var calcDimensions = function(event) {
+	       var images = document.getElementsByClassName('mini');
+         for(image of images) {
+             calcDimensionsForImage(image);
+         }
+     }
+     var setColors = function(event) {
+	       var images = document.getElementsByClassName('mini');
+         for(image of images) {
+            image.style.backgroundColor = document.getElementById('bgcolor').value;
+            image.style.paddingTop = document.getElementById('padding-v').value + 'in'
+            image.style.paddingBottom = document.getElementById('padding-v').value + 'in'
+             image.style.paddingLeft = document.getElementById('padding-h').value + 'in'
+             image.style.paddingRight = document.getElementById('padding-h').value + 'in'
+         }
+     }
+     var loadFile = function(event) {
+	       var images = document.getElementsByClassName('mini');
+         for(image of images) {
+            image.src = URL.createObjectURL(event.target.files[0]);
+             image.onload = function() {
+                 calcDimensionsForImage(this);
+             }
+         }
+     };
+    </script>
+
     <table><tr>
-        <td>
-            <div class='mini_container size1' >
-	<img src='test_image.png' class='mini flip' \><br>
+<td class='mini_container size1' id='c0' >
+	<img id="output" src='test_image.png' class='mini flip' \><br>
 	<img src='test_image.png' class='mini' \>
-</div>
 </td>
-<td>
-<div class='mini_container size2'>
-	<img src='test_image.png' class='mini flip' \><br>
-	<img src='test_image.png' class='mini' \>
-</div>
+<td class='mini_container size1' id='c1' >
+	  <img id="output" src='test_image.png' class='mini flip' \><br>
+	  <img src='test_image.png' class='mini' \>
+</td>
+<td class='mini_container size1' id='c2' >
+	  <img id="output" src='test_image.png' class='mini flip' \><br>
+	  <img src='test_image.png' class='mini' \>
+</td>
+<td class='mini_container size1' id='c3' >
+	  <img id="output" src='test_image.png' class='mini flip' \><br>
+	  <img src='test_image.png' class='mini' \>
 </td>
 </tr></table>
 </body>
