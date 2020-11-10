@@ -1,0 +1,92 @@
+.maingrid
+{
+    width:100%;
+    text-align: center;
+    padding: 2em;
+}
+.column
+{
+    width: 50%;
+}
+.quick
+{
+    width: 50%;
+    float: left;
+}
+
+.full
+{
+    clear: left;
+}
+.extended
+{
+    height: 5em;
+    
+}
+.inner
+{
+    margin: lem;
+    padding: 1em;
+    text-transform: uppercase;
+    border-radius: 1.5em;
+    border: 0.25em white solid;
+
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.25em;
+    position: relative;
+
+}
+.inner.weapon
+{
+    background: #cc0000;
+    color: white;
+}
+.weapon .desc
+{
+    color: #ff7777;
+}
+.inner.tech
+{
+    background: #990099;
+    color: white;
+}
+.tech .desc
+{
+    color: #ff7777;
+}
+.inner.chassis
+{
+    background: #009900;
+    color: white;
+}
+.chassis .desc
+{
+    color: #77ff77;
+}
+.desc
+{
+    text-transform: none;
+    float: right;
+    font-size: 0.75em;
+    font-weight: normal;
+}
+.desc.right
+{
+    position: absolute;
+    margin: 1em;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    v-align: center;
+}
+.desc.left
+{
+    position: absolute;
+    margin: 1em;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    v-align: center;
+}
+
