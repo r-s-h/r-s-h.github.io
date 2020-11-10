@@ -1,3 +1,4 @@
+
 .header-container
 {
     width:100%;
@@ -127,8 +128,8 @@
 }
 .reaction .desc
 {
-
-    padding-top: 0.2em;
+    /*padding-top: 0.2em;*/
+    vertical-align: middle;
     color: #448877;
     font-size: 0.6em;
 }
@@ -187,8 +188,8 @@
 
 .roll
 {
-    padding-left: 2.2em;
-    padding-top:0.5em;
+    padding-left: 2.2in;
+    padding-top:0.5in;
     background-image: url(d20.svg);
     background-size: 2em 2em;
     background-repeat:no-repeat;
@@ -206,3 +207,30 @@
     background-image: url(d20_yellow.svg);
 }
 
+.chassis .roll
+{
+    background-image: url(d20_green.svg);
+}
+
+@media print {
+    .header {
+        font-size: 2em !important;
+        line-height: 2.5em !important;
+    }
+    .tray {
+        font-size: 1.5em !important;
+        line-height: 3.4em !important;
+    }
+    .desc {
+        margin-top: 0.16in !important;
+        font-size: 0.5em !important;
+    }
+    .reaction .desc {
+        font-size: 0.4em !important;
+    }
+    .reduced {
+        padding-left: 0in;
+        padding-right: 0in;
+    }
+
+}
