@@ -3,11 +3,21 @@
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
+
+        <div class="header-container">
+            <div class="header">
+            GMS Pilot Console
+            </div>
+            <div class="tray">
+                A C T I O N &nbsp; T O K E N S 
+            </div>
+        </div>
+
         <table class="maingrid">
             <tr class="maingrid">
                 <td class="column">
                     <div class="quick">
-                        <div class="inner chassis">
+                        <div class="inner chassis darker">
                             Prepare
                             <div class="desc right">
                                 when <b>X</b> then<br>
@@ -20,7 +30,7 @@
                         <div class="inner chassis">
                         Boost
                             <div class="desc right">
-                                move <br><b>speed</b>
+                                move<br>your speed
                             </div>
                         </div>
                     </div>
@@ -40,7 +50,7 @@
                     </div>
 
                     <div class="quick">
-                        <div class="inner chassis">
+                        <div class="inner chassis darker">
                             hide
                             <div class="desc right">
                                 requires invis<br>
@@ -50,10 +60,10 @@
                     </div>
 
                     <div class="quick">
-                        <div class="inner chassis">
+                        <div class="inner chassis darker">
                             search
                             <div class="desc right">
-                                roll<br>
+                                systems<br>
                                 vs agility                            </div>
                         </div>
                     </div>
@@ -63,8 +73,11 @@
                     <div class="full">
                         <div class="inner misc">
                             Improvised attack
+                            <div class="desc left roll">
+                                +grit
+                            </div>
                             <div class="desc right">
-                                1d6 kinetic
+                                adjacent, 1d6<br> kinetic
                             </div>
                         </div>
                     </div>
@@ -73,7 +86,7 @@
                             Disengage
                             <div class="desc right">
                                 ignore engagement<br>
-                                no reactions
+                                don't trigger reactions
                             </div>
                         </div>
                     </div>
@@ -96,7 +109,7 @@
 
                     <div class="emergency">
                         <div class="inner misc">
-                            shutdown
+                            shut down
                         </div>
                     </div>
 
@@ -104,10 +117,11 @@
                 </td>
                 <td class="column">
                     <div class="quick">
-                        <div class="inner weapon">
+                        <div class="inner weapon darker">
                             Activate
+
                             <div class="desc right">
-                                use module<br>
+                                use a system<br>
                                 (quick/full)
                             </div>
                         </div>
@@ -116,6 +130,9 @@
                     <div class="quick">
                         <div class="inner weapon">
                         Skirmish
+                            <div class="desc left roll">
+                                +grit
+                            </div>
                             <div class="desc right">
                                 attack with<br>one weapon
                             </div>
@@ -125,6 +142,9 @@
                     <div class="full">
                         <div class="inner weapon">
                         Barrage
+                            <div class="desc left roll">
+                                +grit
+                            </div>
                             <div class="desc right">
                                 two weapons<br>
                                 or <b> superheavy</b>
@@ -133,8 +153,11 @@
                     </div>
 
                     <div class="quick">
-                        <div class="inner weapon">
+                        <div class="inner weapon darker">
                             Ram
+                            <div class="desc left roll">
+                                +grit
+                            </div>
                             <div class="desc right">
                                 knock prone<br>
                                 may knockback 1
@@ -143,8 +166,11 @@
                     </div>
 
                     <div class="quick">
-                        <div class="inner weapon">
+                        <div class="inner weapon darker">
                             Grapple
+                            <div class="desc left roll">
+                                +grit
+                            </div>
                             <div class="desc right">
                                 immobilize <br>
                                 no reactions
@@ -186,7 +212,8 @@
                     <div class="quick">
                         <div class="inner toption">
                             Invade
-                            <div class="desc left">
+                            <div class="desc left roll">
+                                +tech
                             </div>
                             <div class="desc right">
                                 2 heat,<br>slow & impair<br>
@@ -214,8 +241,8 @@
                                 harmed<br>by attack?
                             </div>
                             <div class="desc right">
-                                ...resistance,<br>
-                                +1d, -actions
+                                resist, +1 &#9633;<br>
+                                no move, one quick
                             </div>
                         </div>
                     </div>

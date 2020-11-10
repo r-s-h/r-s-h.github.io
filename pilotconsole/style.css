@@ -1,7 +1,41 @@
+.header-container
+{
+    width:100%;
+    position: relative;
+    font-family: monospace;
+}
+.header
+{
+    padding-left: 1em;
+    font-size: 3em;
+    line-height: 2em;
+    color: #ccc;
+}
+.tray {
+    background: #eee;
+    border-radius: 3em;
+
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 60%;
+    font-size: 2em;
+
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3em;
+
+    color: #ddd;
+
+    letter-spacing: 0.3em;
+}
 .maingrid
 {
     width:100%;
     text-align: center;
+}
+.maingrid tbody {
     padding: 2em;
 }
 .column
@@ -48,8 +82,12 @@
 }
 .inner.weapon
 {
-    background: #cc0000;
+    background: #990000;
     color: white;
+}
+.inner.weapon.darker
+{
+    background: #770000 !important;
 }
 .weapon .desc
 {
@@ -69,6 +107,10 @@
     background: #009900;
     color: white;
 }
+.inner.chassis.darker
+{
+    background: #007700 !important;
+}
 .chassis .desc
 {
     color: #77ff77;
@@ -76,7 +118,7 @@
 
 .inner.reaction
 {
-    background: #88ffee;
+    background: #bbffee;
     color: #004433;
     text-transform: none !important;
     padding: 1em !important;
@@ -141,5 +183,26 @@
     top: 0px;
     height: 100%;
     v-align: center;
+}
+
+.roll
+{
+    padding-left: 2.2em;
+    padding-top:0.5em;
+    background-image: url(d20.svg);
+    background-size: 2em 2em;
+    background-repeat:no-repeat;
+    color: transparent !important;
+
+}
+
+.toption .roll
+{
+    background-image: url(d20_violet.svg);
+}
+
+.misc .roll
+{
+    background-image: url(d20_yellow.svg);
 }
 
