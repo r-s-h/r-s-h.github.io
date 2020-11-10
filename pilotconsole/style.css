@@ -134,12 +134,18 @@
     font-size: 0.6em;
 }
 
+.reaction .desc .right
+{
+    /*padding-top: 0.2em;*/
+    vertical-align: middle;
+    color: #448877;
+    font-size: 0.6em;
+}
+
 .inner.toption
 {
     text-transform: none !important;
-    padding: 1em !important;
     border-radius: 0.5em !important;
-    border: 0.25em white solid;
     background: #ff99ff;
     color: #440044;
 }
@@ -169,12 +175,7 @@
 }
 .desc.right
 {
-    position: absolute;
-    margin: 1em;
-    right: 0px;
-    top: 0px;
-    height: 100%;
-    v-align: center;
+    float: none;
 }
 .desc.left
 {
@@ -221,13 +222,13 @@
         font-size: 1.5em !important;
         line-height: 3.4em !important;
     }
-    .desc {
+    /*.desc {
         margin-top: 0.16in !important;
         font-size: 0.5em !important;
     }
     .reaction .desc {
         font-size: 0.4em !important;
-    }
+    }*/
     .reduced {
         padding-left: 0in;
         padding-right: 0in;
