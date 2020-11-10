@@ -13,6 +13,16 @@
     width: 50%;
     float: left;
 }
+.quick2
+{
+    width: 25%;
+    float: left;
+}
+.emergency
+{
+    width: 33.3%;
+    float: left;
+}
 
 .full
 {
@@ -25,7 +35,6 @@
 }
 .inner
 {
-    margin: lem;
     padding: 1em;
     text-transform: uppercase;
     border-radius: 1.5em;
@@ -53,7 +62,7 @@
 }
 .tech .desc
 {
-    color: #ff7777;
+    color: #ff77ff;
 }
 .inner.chassis
 {
@@ -64,6 +73,50 @@
 {
     color: #77ff77;
 }
+
+.inner.reaction
+{
+    background: #88ffee;
+    color: #004433;
+    text-transform: none !important;
+    padding: 1em !important;
+    border-radius: 0.5em !important;
+    border: 0.25em white solid;
+}
+.reaction .desc
+{
+
+    padding-top: 0.2em;
+    color: #448877;
+    font-size: 0.6em;
+}
+
+.inner.toption
+{
+    text-transform: none !important;
+    padding: 1em !important;
+    border-radius: 0.5em !important;
+    border: 0.25em white solid;
+    background: #ff99ff;
+    color: #440044;
+}
+
+
+.inner.misc
+{
+    background: #999900;
+    color: white;
+}
+.misc .desc
+{
+    color: #ffff77;
+}
+
+.emergency .inner
+{
+    background: #777700 !important;
+}
+
 .desc
 {
     text-transform: none;
