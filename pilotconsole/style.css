@@ -4,13 +4,18 @@
     width:100%;
     position: relative;
     font-family: monospace;
+    height: 0.7in;
 }
 .header
 {
-    padding-left: 1em;
+    padding-left: 0.2in;
     font-size: 3em;
-    line-height: 2em;
     color: #ccc;
+}
+.instructions {
+    padding-left: 0.2in;
+    color: #ccc;
+    
 }
 .tray {
     background: #eee;
@@ -83,43 +88,46 @@
 }
 .inner.weapon
 {
-    background: #990000;
+    /*background: #900002;*/
+    background: #7e0405;
     color: white;
 }
 .inner.weapon.darker
 {
-    background: #770000 !important;
+    background: #660002 !important;
 }
 .weapon .desc
 {
-    color: #ff7777;
+    color: #ff9999;
 }
 .inner.tech
 {
-    background: #990099;
+    background: #7e2477;
     color: white;
 }
 .tech .desc
 {
-    color: #ff77ff;
+    color: #e39cdd;
 }
 .inner.chassis
 {
-    background: #009900;
+    /*background: #68bd45; - lancer basic*/ 
+    background: #467100;
     color: white;
 }
 .inner.chassis.darker
 {
-    background: #007700 !important;
+    background: #253c00 !important;
 }
 .chassis .desc
 {
-    color: #77ff77;
+    /*color: #bbff4d;*/
+    color: #e3ffb5;
 }
 
 .inner.reaction
 {
-    background: #bbffee;
+    background: #f0fffb;
     color: #004433;
     text-transform: none !important;
     padding: 1em !important;
@@ -131,7 +139,7 @@
     /*padding-top: 0.2em;*/
     vertical-align: middle;
     color: #448877;
-    font-size: 0.6em;
+    font-size: 0.7em;
 }
 
 .reaction .desc .right
@@ -146,14 +154,14 @@
 {
     text-transform: none !important;
     border-radius: 0.5em !important;
-    background: #ff99ff;
+    background: #f2e9f1;
     color: #440044;
 }
 
 
 .inner.misc
 {
-    background: #999900;
+    background: #c75a00;
     color: white;
 }
 .misc .desc
@@ -163,7 +171,7 @@
 
 .emergency .inner
 {
-    background: #777700 !important;
+    background: #803900 !important;
 }
 
 .desc
@@ -216,7 +224,6 @@
 @media print {
     .header {
         font-size: 2em !important;
-        line-height: 2.5em !important;
     }
     .tray {
         font-size: 1.5em !important;
