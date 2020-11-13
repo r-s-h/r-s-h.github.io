@@ -4,16 +4,19 @@
     width:100%;
     position: relative;
     font-family: monospace;
+    font-family: 'Goldman', cursive;
     height: 0.7in;
 }
 .header
 {
     padding-left: 0.2in;
     font-size: 3em;
-    color: #ccc;
+    font-size: 2.5em;
+    color: #aaa;
 }
 .instructions {
     padding-left: 0.2in;
+    font-size: 0.8em;
     color: #ccc;
     
 }
@@ -25,7 +28,7 @@
     right: 0px;
     top: 0px;
     height: 100%;
-    width: 60%;
+    width: 65%;
     font-size: 2em;
 
     text-align: center;
@@ -80,29 +83,41 @@
     border-radius: 1.5em;
     border: 0.25em white solid;
 
-    font-family: monospace;
+    font-family: 'Goldman', cursive;
     font-weight: bold;
-    font-size: 1.25em;
+    font-size: 1.1em;
+    /*font-size: 1.25em;*/
     position: relative;
 
+}
+.desc
+{
+    font-family: monospace;
 }
 .inner.weapon
 {
     /*background: #900002;*/
-    background: #7e0405;
+    /*color: #a10000;*/
+    background: #d56917;
+    background: #703050;
+    background: #a31844;
     color: white;
 }
 .inner.weapon.darker
 {
-    background: #660002 !important;
+    background: #e08c47;
+    background: #953c66;
+    background: #6a1030;
 }
 .weapon .desc
 {
-    color: #ff9999;
+    /*color: #6c0202;*/
+    /*color: #ff9999;*/
 }
 .inner.tech
 {
-    background: #7e2477;
+    background: #7c2678;
+    background: #833A8e;
     color: white;
 }
 .tech .desc
@@ -112,22 +127,53 @@
 .inner.chassis
 {
     /*background: #68bd45; - lancer basic*/ 
-    background: #467100;
+    background: #1d6761 ;
     color: white;
 }
 .inner.chassis.darker
 {
-    background: #253c00 !important;
+    background: #00aaa5 !important;
 }
 .chassis .desc
 {
-    /*color: #bbff4d;*/
     color: #e3ffb5;
+    /*color: #bbff4d;*/
+}
+.chassis.darker .desc
+{
+    color: #ebffcf;
+}
+.inner.toption
+{
+    text-transform: none !important;
+    border-radius: 0.5em !important;
+    background: #dac9df;
+    color: #440044;
+}
+
+
+.inner.misc
+{
+    color: white;
+    background: #703050;
+    background: #d56917;
+    background: #a4254a;
+    background: #e08c47;
+}
+.misc .desc
+{
+    /*color: #ffff77;*/
+}
+
+.emergency .inner
+{
+    background: #a4254a;
+    background: #d56917;
 }
 
 .inner.reaction
 {
-    background: #f0fffb;
+    background: #c8e4e3;
     color: #004433;
     text-transform: none !important;
     padding: 1em !important;
@@ -150,29 +196,6 @@
     font-size: 0.6em;
 }
 
-.inner.toption
-{
-    text-transform: none !important;
-    border-radius: 0.5em !important;
-    background: #f2e9f1;
-    color: #440044;
-}
-
-
-.inner.misc
-{
-    background: #c75a00;
-    color: white;
-}
-.misc .desc
-{
-    color: #ffff77;
-}
-
-.emergency .inner
-{
-    background: #803900 !important;
-}
 
 .desc
 {
@@ -221,9 +244,21 @@
     background-image: url(d20_green.svg);
 }
 
+.copyright {
+    text-align:right;
+    float: right;
+    font-size: 0.7em;
+    font-family: monospace;
+    color: #ccc;
+}
+.copyright a {
+    color: #ccc !important; 
+}
+
 @media print {
     .header {
         font-size: 2em !important;
+        font-size: 1.5em !important;
     }
     .tray {
         font-size: 1.5em !important;
