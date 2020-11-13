@@ -185,16 +185,9 @@
     /*padding-top: 0.2em;*/
     vertical-align: middle;
     color: #448877;
-    font-size: 0.7em;
+    font-size: 0.8em;
 }
 
-.reaction .desc .right
-{
-    /*padding-top: 0.2em;*/
-    vertical-align: middle;
-    color: #448877;
-    font-size: 0.6em;
-}
 
 
 .desc
@@ -262,7 +255,7 @@
     }
     .tray {
         font-size: 1.5em !important;
-        line-height: 3.4em !important;
+        line-height: 2.9em !important;
     }
     /*.desc {
         margin-top: 0.16in !important;
