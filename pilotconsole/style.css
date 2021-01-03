@@ -111,6 +111,7 @@
 }
 .weapon .desc
 {
+    color: #f1c1ce;
     /*color: #6c0202;*/
     /*color: #ff9999;*/
 }
@@ -192,6 +193,7 @@
 
 .desc
 {
+    position: relative;
     text-transform: none;
     float: right;
     font-size: 0.75em;
@@ -199,12 +201,14 @@
 }
 .desc.right
 {
+    z-index: 10;
     float: none;
 }
 .desc.left
 {
+    z-index: 1;
     position: absolute;
-    margin: 1em;
+    /*margin: 1em;*/
     left: 0px;
     top: 0px;
     height: 100%;
@@ -213,13 +217,22 @@
 
 .roll
 {
+    margin-top: 0in;
+    margin-left: 0.2in;
     padding-left: 2.2in;
-    padding-top:0.5in;
+    /*padding-top:0.5in;*/
     background-image: url(d20.svg);
-    background-size: 2em 2em;
+    background-position: left center;
+    background-size: 0.3in 0.3in;
     background-repeat:no-repeat;
     color: transparent !important;
 
+}
+
+.weapon.darker .roll
+{
+    /*background-image: url(d20_new.svg);*/
+    background-image: url(d20_darkred.svg);
 }
 
 .toption .roll
@@ -240,7 +253,7 @@
 .copyright {
     text-align:right;
     float: right;
-    font-size: 0.7em;
+    font-size: 0.8em;
     font-family: monospace;
     color: #ccc;
 }
