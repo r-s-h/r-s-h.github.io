@@ -117,7 +117,7 @@
 }
 .inner.tech
 {
-    background: #7c2678;
+    /*background: #7c2678;*/
     background: #833A8e;
     color: white;
 }
@@ -163,13 +163,17 @@
 }
 .misc .desc
 {
-    /*color: #ffff77;*/
+    color: #ffffaa;
 }
 
 .emergency .inner
 {
     background: #a4254a;
     background: #d56917;
+}
+.emergency .desc
+{
+    color: #ffff99;
 }
 
 .inner.reaction
@@ -237,6 +241,7 @@
 
 .toption .roll
 {
+    /*margin-left: 0.1in;*/
     background-image: url(d20_violet.svg);
 }
 
@@ -259,6 +264,12 @@
 }
 .copyright a {
     color: #ccc !important; 
+}
+i {
+    /*color: #7ecc00;*/
+    /*color: #719438;*/
+    color: #98c059;
+
 }
 
 @media print {
