@@ -1,0 +1,117 @@
+<html>
+<style>
+th {
+    color: white;
+    background: black;
+}
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+.hp {
+    background: #fcc;
+    font-size: 1.2em;
+}
+.hc {
+    background: #ecf;
+    font-size: 1.2em;
+}
+.hpe {
+    background: #822;
+    font-size: 1.2em;
+    color: white;
+}
+.hce {
+    background: #204;
+    color: white;
+    font-size: 1.2em;
+}
+b {
+    background: #ccc;
+}
+h1 {
+    margin: 0px;
+    font-size: 1.2em;
+}
+pre {
+    white-space: pre-wrap;
+    break-inside: avoid;
+}
+#blocksl {
+    float: left;
+    width: 3.5in;
+}
+#blocksr {
+    float: right;
+    width: 3.5in;
+}
+@media print {
+textarea {
+    display: none;
+}
+}
+</style>
+<head>
+<script>
+function statblocks()
+{
+    var markdown = document.getElementById('paste').value
+    markdown = markdown.replace(/\*\*(.*?)\*\*/g,"<b>$1</b>")
+    matches = markdown.matchAll(/(#*# .*?\nHASE[^#]*)\n/g)
+
+    htmlblocksl = []
+    htmlblocksr = []
+    var side = 0
+    for(const match of matches)
+    {
+	lines = match[1].split("\n")
+	title = lines[0]
+	hase = lines[1].split("HASE")[1].split("/")
+	hp = lines[2].split("HP")[1].split("|")
+	eva = lines[3].split("Eva")[1].split("|")
+	if(lines[4].match("Speed"))
+	    speed = lines[4].split("Speed")[1]
+	else
+	    speed = lines[4]
+	sensors = lines[5].split("Sensors/ST")[1].split("|")
+	desc = lines.slice(6).join("\n")
+
+	html = "<pre><h1>"+title+"</h1><table><tr><th>H</th><th>A</th><th>S</th><th>E</th><th>Eva</th><th>E-def</th><th>Sensor</th><th>Save T</th><th>Speed</th></tr>"
+	html += "<tr>"
+	html += "<td>"+hase[0]+"</td><td>"+hase[1]+"</td><td>"+hase[2]+"</td><td>"+hase[3]+"</td>"
+	html += "<td class='hpe'>"+eva[0]+"</td><td class='hce'>"+eva[1]+"</td>"
+	html += "<td class=''>"+sensors[0]+"</td><td class=''>"+sensors[1]+"</td>"
+	html += "<td>"+speed+"</td>"
+	html += "</tr></table>"
+	html += "<table><tr><th>HP</th><td class='hp'>"+hp[0]+"</td></tr>"
+	html += "<tr><th>Heat</th><td class='hc'>"+hp[1]+"</td></tr></table>"
+	html += desc
+	html += "</pre>"
+	
+
+
+	if(!side)
+	    htmlblocksl.push(html)
+	else
+	    htmlblocksr.push(html)
+	side = !side
+    }
+
+    //markdown = markdown.replace("\n","<br>\n")
+
+    document.getElementById('blocksl').innerHTML = htmlblocksl.join("<br>")
+    document.getElementById('blocksr').innerHTML = htmlblocksr.join("<br>")
+}
+</script>
+<body>
+<textarea id='paste' rows=25 cols=25 onkeyup='statblocks()'>
+**test**
+</textarea><br style='clear:both;'>
+<div id='blocksl'>
+</div>
+<div id='blocksr'>
+</div>
+</body>
+</html>
+
+
